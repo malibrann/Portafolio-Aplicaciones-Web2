@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Archivos</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Visualizador de Archivos</h1>
+            <p>PDF, Word y Excel</p>
+        </header>
+
+        <div class="area-carga">
+            <input type="file" id="archivo" accept=".pdf,.doc,.docx,.xls,.xlsx" />
+            <label for="archivo" class="boton-cargar">Seleccionar Archivo</label>
+            <div id="info-archivo"></div>
+        </div>
+
+        <div id="area-vista" class="oculto">
+            <div class="controles">
+                <button id="btn-cerrar">Cerrar Vista</button>
+                <span id="nombre-archivo"></span>
+            </div>
+            <div id="visor"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
